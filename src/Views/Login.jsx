@@ -46,7 +46,7 @@ function Login() {
     const fetchData = async () => {
       try {
         const res = await axios.post(
-          "http://localhost:8000/api/auth/login",
+          "http://3.82.158.190:8000/api/auth/login",
           { username, email, password },
           { withCredentials: true }
         );

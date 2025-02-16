@@ -32,7 +32,7 @@ const MoodVisualization = () => {
   useEffect(() => {
     const fetchMoodData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/mood/get", {
+        const response = await axios.get("http://3.82.158.190:8000/api/mood/get", {
           withCredentials: true,
         });
 

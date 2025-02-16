@@ -19,7 +19,7 @@ const TaskList = () => {
   const fetchTasks = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("http://localhost:8000/api/tasks/getall", {
+      const response = await axios.get("http://3.82.158.190:8000/api/tasks/getall", {
         withCredentials: true,
       });
       setTasks(response.data);
@@ -37,7 +37,7 @@ const TaskList = () => {
     console.log(`Completing task: ${id}`);
     try {
       await axios.put(
-        `http://localhost:8000/api/tasks/${id}`,
+        `http://3.82.158.190:8000/api/tasks/${id}`,
         { status: "completed" },
         { withCredentials: true }
       );
@@ -65,7 +65,7 @@ const TaskList = () => {
   const deleteTask = async (id) => {
     console.log(`Deleting task: ${id}`);
     try {
-      await axios.delete(`http://localhost:8000/api/tasks/${id}`, {
+      await axios.delete(`http://3.82.158.190:8000/api/tasks/${id}`, {
         withCredentials: true,
       });
       // Update the tasks state by filtering out the deleted task.
@@ -83,7 +83,7 @@ const TaskList = () => {
     try {
       // POST request to add a new task.
       const response = await axios.post(
-        "http://localhost:8000/api/tasks/create",
+        "http://3.82.158.190:8000/api/tasks/create",
         newTask,
         { withCredentials: true }
       );

@@ -9,7 +9,7 @@ const QuoteReel = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/articles", {
+        const response = await axios.get("http://3.82.158.190:8000/api/articles", {
           withCredentials: true,
         });
         console.log(response.data.data); // Log the response

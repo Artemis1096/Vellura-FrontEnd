@@ -28,7 +28,7 @@ function OtpVerification({ isOtpSubmitted, setIsOtpSubmitted, email }) {
 
   const handleResendOtp = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/api/auth/resendotp", {
+      const res = await axios.post("http://3.82.158.190:8000/api/auth/resendotp", {
         email: email,
       });
 
@@ -49,7 +49,7 @@ function OtpVerification({ isOtpSubmitted, setIsOtpSubmitted, email }) {
     const fetchData = async () => {
       try {
         const res = await axios.post(
-          "http://localhost:8000/api/auth/verifyotp",
+          "http://3.82.158.190:8000/api/auth/verifyotp",
           { email: email, otp: otp }
         );
 

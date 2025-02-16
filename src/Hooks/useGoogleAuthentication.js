@@ -6,7 +6,7 @@ import {UseAuthContext} from '../Context/AuthContext.jsx';
 const useGoogleAuth = () => {
   const {setAuth} = UseAuthContext();
   const dispatch = useDispatch();
-  const googleAuthUrl = "http://localhost:8000/api/auth/google"; // Ensure this matches your backend URL
+  const googleAuthUrl = "http://3.82.158.190:8000/api/auth/google"; // Ensure this matches your backend URL
 
   const authenticate = useCallback(() => {
     // Open the popup for Google login

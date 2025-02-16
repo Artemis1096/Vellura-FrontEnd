@@ -36,7 +36,7 @@ function SideBar({ open, setOpen }) {
 
   const handleLogOut = async () => {
     try {
-      const res = await axios.post("http://localhost:8000/api/auth/logout");
+      const res = await axios.post("http://3.82.158.190:8000/api/auth/logout");
       dispatch(logout());
       localStorage.clear();
       setAuth(null);

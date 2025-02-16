@@ -19,7 +19,7 @@ const JournalPage = () => {
     const fetchJournals = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8000/api/users/journals/${userId}`,
+          `http://3.82.158.190:8000/api/users/journals/${userId}`,
           { withCredentials: true }
         );
         setJournals(sortJournalsByDate(res.data.journals, sortOrder));
@@ -49,7 +49,7 @@ const JournalPage = () => {
 
     try {
       const res = await axios.delete(
-        `http://localhost:8000/api/users/journals/delete/${id}`,
+        `http://3.82.158.190:8000/api/users/journals/delete/${id}`,
         { withCredentials: true }
       );
       console.log(res);
@@ -68,7 +68,7 @@ const JournalPage = () => {
     if (newNote.title && newNote.content) {
       try {
         const res = await axios.post(
-          "http://localhost:8000/api/users/journals/add",
+          "http://3.82.158.190:8000/api/users/journals/add",
           {
             ...newNote,
             userId,

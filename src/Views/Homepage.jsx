@@ -1,7 +1,7 @@
 import "../Styles/HomePage.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Quotes from "../../Data/quotes.json";
+import Quotes from "../Assets/quotes.json";
 import MoodComponent from "../Components/MoodComponent";
 import Loader from "../Components/Loader";
 import bg from "../Assets/bgx.jpeg";
@@ -25,7 +25,7 @@ const Homepage = () => {
     const fetchMoodStatus = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/mood/check",
+          "http://3.82.158.190:8000/api/mood/check",
           {
             withCredentials: true,
           }

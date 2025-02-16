@@ -33,7 +33,7 @@ const Profile = () => {
     const fetchUser = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8000/api/users/${userData.id}`,
+          `http://3.82.158.190:8000/api/users/${userData.id}`,
           {
             withCredentials: true,
           }
