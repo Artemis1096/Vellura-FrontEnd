@@ -24,7 +24,7 @@ const ArticleDetails = () => {
     const fetchArticle = async () => {
       try {
         const response = await axios.get(
-          `http://3.82.158.190:8000/api/articles/${id}`,
+          `/api/articles/${id}`,
           { withCredentials: true }
         );
 
@@ -44,7 +44,7 @@ const ArticleDetails = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://3.82.158.190:8000/api/articles/delete/${id}`, {
+      await axios.delete(`/api/articles/delete/${id}`, {
         withCredentials: true,
       });
       navigate(-1);
@@ -58,7 +58,7 @@ const ArticleDetails = () => {
     try {
       const updatedInfo = { id, title: updatedTitle, content: updatedContent };
       await axios.put(
-        `http://3.82.158.190:8000/api/articles/update/${id}`,
+        `/api/articles/update/${id}`,
         updatedInfo,
         { withCredentials: true }
       );

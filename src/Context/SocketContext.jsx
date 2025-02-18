@@ -15,11 +15,9 @@ export const SocketContextProvider = ({children}) => {
     useEffect(() => {
         console.log(auth);
         if(auth){ 
-            const socket = io("http://localhost:8000", {
-                query : {
-                    userId : auth.id
-                }
-            });
+            const socket = io("http://3.82.158.190:8000",  {
+                withCredentials: true,
+              });
             setSocket(socket);
 
             return () => socket.close();

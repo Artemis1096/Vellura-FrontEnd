@@ -33,7 +33,7 @@ const Profile = () => {
     const fetchUser = async () => {
       try {
         const res = await axios.get(
-          `http://3.82.158.190:8000/api/users/${userData.id}`,
+          `/api/users/${userData.id}`,
           {
             withCredentials: true,
           }
@@ -71,7 +71,7 @@ const Profile = () => {
       };
 
       const res = await axios.post(
-        `http://localhost:8000/api/users/edit`,
+        `/api/users/edit`,
         updatedInfo,
         { withCredentials: true }
       );
@@ -93,7 +93,7 @@ const Profile = () => {
     }
 
     try {
-      const res = await axios.delete(`http://localhost:8000/api/users/delete`, {
+      const res = await axios.delete(`/api/users/delete`, {
         withCredentials: true,
       });
 

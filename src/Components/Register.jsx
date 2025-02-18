@@ -44,7 +44,7 @@ function Register() {
     const fetchData = async () => {
       try {
         const res = await axios.post(
-          "http://3.82.158.190:8000/api/auth/register",
+          "/api/auth/register",
           {
             username: username,
             name: fullName,

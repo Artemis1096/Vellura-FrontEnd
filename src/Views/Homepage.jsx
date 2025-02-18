@@ -25,7 +25,7 @@ const Homepage = () => {
     const fetchMoodStatus = async () => {
       try {
         const response = await axios.get(
-          "http://3.82.158.190:8000/api/mood/check",
+          "/api/mood/check",
           {
             withCredentials: true,
           }

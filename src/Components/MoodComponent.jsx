@@ -28,7 +28,7 @@ const MoodComponent = ({ onMoodSubmit }) => {
 
     try {
       await axios.post(
-        "http://3.82.158.190:8000/api/mood/set",
+        "/api/mood/set",
         { mood: selectedMood },
 
         { withCredentials: true }

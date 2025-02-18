@@ -22,7 +22,7 @@ const Chat = () => {
         const fetchMessages = async () => {
             try {
                 const res = await axios.get(
-                    `http://3.82.158.190:8000/api/message/get/${friendId}`,
+                    `/api/message/get/${friendId}`,
                     {
                         headers: { "Content-Type": "application/json" },
                         withCredentials: true,
@@ -54,7 +54,7 @@ const Chat = () => {
 
         try {
             const res = await axios.post(
-                `http://3.82.158.190:8000/api/message/send/${friendId}`,
+                `/api/message/send/${friendId}`,
                 messageData,
                 {
                     headers: { "Content-Type": "application/json" },

@@ -33,7 +33,7 @@ function ArticlesPage() {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await axios.get("http://3.82.158.190:8000/api/articles", {
+        const response = await axios.get("/api/articles", {
           withCredentials: true,
         });
         const fetchedArticles = response.data.data.map((article) => ({
@@ -61,7 +61,7 @@ function ArticlesPage() {
   const handleLike = async (articleId) => {
     try {
       const response = await axios.put(
-        `http://3.82.158.190:8000/api/articles/like/${articleId}`,
+        `/api/articles/like/${articleId}`,
         {},
         { withCredentials: true }
       );
@@ -90,7 +90,7 @@ function ArticlesPage() {
       const data = new FormData();
       data.append("image", image);
       try {
-        const uploadRes = await axios.post("http://3.82.158.190:8000/api/upload", data, {
+        const uploadRes = await axios.post("/api/upload", data, {
           headers: { "Content-Type": "multipart/form-data" },
         });
         uploadedImageUrl = uploadRes.data.imageUrl;
@@ -106,7 +106,7 @@ function ArticlesPage() {
       };
   
       await axios.post(
-        "http://3.82.158.190:8000/api/articles/create",
+        "/api/articles/create",
         newArticleData,
         { withCredentials: true }
       );

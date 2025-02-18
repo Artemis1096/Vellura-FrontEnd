@@ -19,7 +19,7 @@ const FriendsList = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await fetch(`http://3.82.158.190:8000/api/friends/${userId}`, {
+        const res = await fetch(`/api/friends/${userId}`, {
           credentials: "include",
         });
         const data = await res.json();
@@ -38,7 +38,7 @@ const FriendsList = () => {
 
   const removeFriend = async (friendId) => {
     try {
-      const res = await fetch("http://3.82.158.190:8000/api/friends/remove", {
+      const res = await fetch("/api/friends/remove", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
