@@ -657,7 +657,6 @@ body {
 }
 
 .main {
-  background: url("../Assets/tree.png") no-repeat center center;
   background-size: cover; /* Ensures full coverage */
   height: 100vh; /* 100% of the viewport height */
   width: 100%; /* Ensures full width */
@@ -721,7 +720,6 @@ body {
 }
 
 #finalbackground {
-  background-image: url(./Assets/finalbackground.jpg);
   background-size: cover; /* Ensures the image covers the entire element */
   background-position: center; /* Centers the background */
   background-repeat: no-repeat; /* Prevents tiling */
@@ -731,7 +729,6 @@ body {
 }
 
 #train {
-  background-image: url(./Assets/boy.png);
   background-size: cover; /* Ensures the image covers the entire element */
   background-position: center; /* Centers the background */
   background-repeat: no-repeat; /* Prevents tiling */
