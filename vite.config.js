@@ -11,7 +11,7 @@ export default defineConfig({
     },
     proxy: {
       "/api": {
-        target: "http://3.82.158.190:8000",
+        target: "https://vellura-backend.onrender.com",
         changeOrigin: true,
         secure: false,
       },
