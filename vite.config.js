@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     cors: {
-      origin: "*",
+      origin: "https://vellura.vercel.app",
     },
     proxy: {
       "/api": {
